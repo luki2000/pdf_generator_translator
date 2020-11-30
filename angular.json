@@ -1,10 +1,16 @@
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
-  "version": 1, 
+  "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "gen-pdf": {
+    "i18n-test": {
       "projectType": "application",
+      "i18n": {
+        "locales": {
+          "es":"src/locale/messages.es.xlf",
+          "fr":"src/locale/messages.fr.xlf"
+        }
+      },
       "schematics": {},
       "root": "",
       "sourceRoot": "src",
@@ -13,7 +19,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/gen-pdf",
+            "outputPath": "dist/i18n-test",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -56,24 +62,36 @@
                   "maximumError": "10kb"
                 }
               ]
+            },
+            "es": {
+              "localize":["es"]
+            },
+            "fr": {
+              "localize":["fr"]
             }
           }
         },
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "gen-pdf:build"
+            "browserTarget": "i18n-test:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "gen-pdf:build:production"
+              "browserTarget": "i18n-test:build:production"
+            },
+            "es": {
+              "browserTarget": "i18n-test:build:es"
+            },
+            "fr": {
+              "browserTarget": "i18n-test:build:fr"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "gen-pdf:build"
+            "browserTarget": "i18n-test:build"
           }
         },
         "test": {
@@ -110,11 +128,11 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "gen-pdf:serve"
+            "devServerTarget": "i18n-test:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "gen-pdf:serve:production"
+              "devServerTarget": "i18n-test:serve:production"
             }
           }
         }

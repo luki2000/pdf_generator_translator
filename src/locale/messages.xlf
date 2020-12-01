@@ -2,18 +2,29 @@
 <xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
   <file source-language="en-US" datatype="plaintext" original="ng2.template">
     <body>
-      <trans-unit id="be6cfd96fa92d1a7cda96a6e0e7a1ed046566340" datatype="html">
+          <trans-unit id="pdf-title" datatype="html">
         <source>PDF Generator</source>
         <target>PDF Generator</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/app.component.html</context>
-          <context context-type="linenumber">298</context>
+          <context context-type="linenumber">5</context>
         </context-group>
-        <note priority="1" from="description">pdf</note>
       </trans-unit>
-      <trans-unit id="reference.number">
-        <source>Reference number: <x id="INTERPOLATION" equiv-text="{{this.number}}"/></source>
-        <target>Reference number: <x id="INTERPOLATION" equiv-text="{{this.number}}"/></target>
+      <trans-unit id="generate_pdf_cta" datatype="html">
+        <source>
+            generate pdf
+        </source>
+        <target>
+            generate pdf
+        </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/app.component.html</context>
+          <context context-type="linenumber">7</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="reference_number_text">
+        <source>Reference number: <x id="reference_number"/></source>
+        <target>Reference number: <x id="reference_number"/></target>
       </trans-unit>
     </body>
   </file>

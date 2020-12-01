@@ -8,6 +8,7 @@ Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app w
 
 ## pdf generator
 By clicking on generate pdf button, it will generate a pdf with a text, you can experiment with other languages (french and spanish) by simply using the following commands
-for spanish: ng serve configuration=es
 
-for french: ng serve configuration=fr
+for spanish: ng serve --configuration=es
+
+for french: ng serve --configuration=fr
